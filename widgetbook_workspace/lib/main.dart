@@ -14,6 +14,12 @@ class WidgetbookApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Widgetbook.material(directories: directories);
+    return Widgetbook.material(
+      directories: directories,
+      addons: [
+        AlignmentAddon(),
+        ViewportAddon([IosViewports.iPhone13]),
+      ],
+    );
   }
 }
