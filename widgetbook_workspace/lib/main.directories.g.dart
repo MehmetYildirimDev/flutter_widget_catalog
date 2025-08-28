@@ -13,6 +13,8 @@
 import 'package:widgetbook/widgetbook.dart' as _widgetbook;
 import 'package:widgetbook_workspace/cool_button.dart'
     as _widgetbook_workspace_cool_button;
+import 'package:widgetbook_workspace/list_view_with_cool_button.dart'
+    as _widgetbook_workspace_list_view_with_cool_button;
 
 final directories = <_widgetbook.WidgetbookNode>[
   _widgetbook.WidgetbookFolder(
@@ -21,12 +23,21 @@ final directories = <_widgetbook.WidgetbookNode>[
       _widgetbook.WidgetbookFolder(
         name: 'button',
         children: [
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CoolButton',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'Default',
-              builder: _widgetbook_workspace_cool_button.buildCoolButtonUseCase,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'Default',
+                builder:
+                    _widgetbook_workspace_cool_button.buildCoolButtonUseCase,
+              ),
+              _widgetbook.WidgetbookUseCase(
+                name: 'List View With Cool Button',
+                builder:
+                    _widgetbook_workspace_list_view_with_cool_button
+                        .buildListViewCoolButtonUseCase,
+              ),
+            ],
           ),
         ],
       ),
