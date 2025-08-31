@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_catalog/core/ui/theme/theme.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
@@ -19,6 +20,12 @@ class WidgetbookApp extends StatelessWidget {
       addons: [
         AlignmentAddon(),
         ViewportAddon([IosViewports.iPhone13]),
+        MaterialThemeAddon(
+          themes: [
+            WidgetbookTheme(name: 'Light', data: AppTheme.lightTheme),
+            WidgetbookTheme(name: 'Dark', data: AppTheme.darkTheme),
+          ],
+        ),
       ],
     );
   }

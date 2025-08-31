@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_catalog/widget/button/cool_button.dart';
+import 'package:flutter_widget_catalog/core/ui/widget/button/cool_button.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
